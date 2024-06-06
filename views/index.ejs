@@ -32,9 +32,13 @@
 
         <%  if(files.length>0)  {      %>
         <%  files.forEach(function(val){ %>
-          <div class="task min-w-72 px-3 py-4 rounded-md bg-zinc-700 ">
+          <div class="task min-w-72 px-3 py-4 rounded-md bg-zinc-700  ">
             <h1 class="text-3xl tracking-tigher"><%=val%></h1>
-            <a class="text-blue-600 inline-block mt-5" href="/files/<%= val %>">read more</a>
+          <div class="flex justify-between mt-5  items-center">
+
+            <a class="text-blue-600 inline-block " href="/files/<%= val %>">read more</a>
+            <a href="/edit/<%=val%>" class="text-zinc-500 ">edit filename</a>
+          </div>
           </div>
 
         <% })    %>
